@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EC00188-38E1-4C6B-B409-DC808DE7843D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopify_Manager</RootNamespace>
+    <AssemblyName>Shopify Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.119.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.119.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BulkProductInsert.cs" />
+    <Compile Include="ErrorLogging\ErrorLogging.cs" />
+    <Compile Include="General.cs" />
+    <Compile Include="UI\BranchSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BranchSelectionForm.Designer.cs">
+      <DependentUpon>BranchSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BulkProductCreate_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BulkProductCreate_frm.Designer.cs">
+      <DependentUpon>BulkProductCreate_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateOceanInvoice_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreateOceanInvoice_frm.Designer.cs">
+      <DependentUpon>CreateOceanInvoice_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ExportDataFrom_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExportDataFrom_frm.Designer.cs">
+      <DependentUpon>ExportDataFrom_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GrandMall_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GrandMall_frm.Designer.cs">
+      <DependentUpon>GrandMall_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main_frm.Designer.cs">
+      <DependentUpon>Main_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsTypes\Settings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ManageLocations_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManageLocations_frm.Designer.cs">
+      <DependentUpon>ManageLocations_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageProducts_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManageProducts_frm.Designer.cs">
+      <DependentUpon>ManageProducts_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MaskingRulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MaskingRulesForm.Designer.cs">
+      <DependentUpon>MaskingRulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductSplitter_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductSplitter_frm.Designer.cs">
+      <DependentUpon>ProductSplitter_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProfileSelector_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProfileSelector_frm.Designer.cs">
+      <DependentUpon>ProfileSelector_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShopifyQtyUpdate_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShopifyQtyUpdate_frm.Designer.cs">
+      <DependentUpon>ShopifyQtyUpdate_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SpecialOps_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SpecialOps_frm.Designer.cs">
+      <DependentUpon>SpecialOps_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\BranchSelectionForm.resx">
+      <DependentUpon>BranchSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BulkProductCreate_frm.resx">
+      <DependentUpon>BulkProductCreate_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreateOceanInvoice_frm.resx">
+      <DependentUpon>CreateOceanInvoice_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExportDataFrom_frm.resx">
+      <DependentUpon>ExportDataFrom_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GrandMall_frm.resx">
+      <DependentUpon>GrandMall_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main_frm.resx">
+      <DependentUpon>Main_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\ManageLocations_frm.resx">
+      <DependentUpon>ManageLocations_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageProducts_frm.resx">
+      <DependentUpon>ManageProducts_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MaskingRulesForm.resx">
+      <DependentUpon>MaskingRulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductSplitter_frm.resx">
+      <DependentUpon>ProductSplitter_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProfileSelector_frm.resx">
+      <DependentUpon>ProfileSelector_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShopifyQtyUpdate_frm.resx">
+      <DependentUpon>ShopifyQtyUpdate_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SpecialOps_frm.resx">
+      <DependentUpon>SpecialOps_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Settings.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="motnaniashop API credentials.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopify.IO\Shopify.IO.csproj">
+      <Project>{375fef02-c918-4290-b9a4-5d1308be6754}</Project>
+      <Name>Shopify.IO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopifyHelper.IO\ShopifyHelper.IO.csproj">
+      <Project>{f01d860c-268b-43f4-9ad1-9ac8e6ea7560}</Project>
+      <Name>ShopifyHelper.IO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

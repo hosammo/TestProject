@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopify Manager", "Test Client\Shopify Manager.csproj", "{9EC00188-38E1-4C6B-B409-DC808DE7843D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopifyHelper.IO", "ShopifyHelper.IO\ShopifyHelper.IO.csproj", "{F01D860C-268B-43F4-9AD1-9AC8E6EA7560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopify.IO", "Shopify.IO\Shopify.IO.csproj", "{375FEF02-C918-4290-B9A4-5D1308BE6754}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EC00188-38E1-4C6B-B409-DC808DE7843D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC00188-38E1-4C6B-B409-DC808DE7843D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC00188-38E1-4C6B-B409-DC808DE7843D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC00188-38E1-4C6B-B409-DC808DE7843D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01D860C-268B-43F4-9AD1-9AC8E6EA7560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01D860C-268B-43F4-9AD1-9AC8E6EA7560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01D860C-268B-43F4-9AD1-9AC8E6EA7560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01D860C-268B-43F4-9AD1-9AC8E6EA7560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375FEF02-C918-4290-B9A4-5D1308BE6754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375FEF02-C918-4290-B9A4-5D1308BE6754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375FEF02-C918-4290-B9A4-5D1308BE6754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375FEF02-C918-4290-B9A4-5D1308BE6754}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68A0506B-0320-44A1-928E-BB64AA2E41E4}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://montaniakw.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Shopify.IO\\Shopify.IO.csproj
+		SccProjectName1 = Shopify.IO
+		SccLocalPath1 = Shopify.IO
+		SccProjectUniqueName2 = ShopifyHelper.IO\\ShopifyHelper.IO.csproj
+		SccProjectName2 = ShopifyHelper.IO
+		SccLocalPath2 = ShopifyHelper.IO
+		SccProjectUniqueName3 = Test\u0020Client\\Shopify\u0020Manager.csproj
+		SccProjectName3 = Test\u0020Client
+		SccLocalPath3 = Test\u0020Client
+	EndGlobalSection
+EndGlobal
